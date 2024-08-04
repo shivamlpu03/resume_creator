@@ -1,0 +1,57 @@
+Please parse the following resume and output the information in JSON format. The resume content is provided below:
+
+[Resume Content]
+
+{
+  "Name": "",
+  "Contact Information": {
+    "Phone": "",
+    "Email": "",
+    "LinkedIn": "",
+    "Address": ""
+  },
+  "Education": [
+    {
+      "Degree": "",
+      "Major": "",
+      "Institution": "",
+      "Year": ""
+    }
+  ],
+  "Experience": [
+    {
+      "Job Title": "",
+      "Company": "",
+      "Location": "",
+      "Start Date": "",
+      "End Date": "",
+      "Responsibilities": [
+        ""
+      ]
+    }
+  ],
+  "Skills": [
+    ""
+  ],
+  "Certifications": [
+    {
+      "Certification Name": "",
+      "Issuing Organization": "",
+      "Date": ""
+    }
+  ],
+  "Projects": [
+    {
+      "Project Title": "",
+      "Description": "",
+      "Technologies Used": ""
+    }
+  ],
+  "Awards": [
+    {
+      "Award Name": "",
+      "Issuing Organization": "",
+      "Date": ""
+    }
+  ]
+}
