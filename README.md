@@ -1,2 +1,3 @@
 # resume_creator
 taking input as in a json format for the cv building....
+Creating a prompt for parsing a resume into JSON format involves writing a well-structured query that instructs the language model to extract and organize relevant information. Here's a sample prompt for achieving this:
