@@ -1,0 +1,78 @@
+import openai
+
+# Replace 'your-api-key' with your actual OpenAI API key
+openai.api_key = 'your-api-key'
+
+def parse_resume(resume_content):
+    prompt = f"""
+    Please parse the following resume and output the information in JSON format. The resume content is provided below:
+    
+    {resume_content}
+    
+    {{
+      "Name": "",
+      "Contact Information": {{
+        "Phone": "",
+        "Email": "",
+        "LinkedIn": "",
+        "Address": ""
+      }},
+      "Education": [
+        {{
+          "Degree": "",
+          "Major": "",
+          "Institution": "",
+          "Year": ""
+        }}
+      ],
+      "Experience": [
+        {{
+          "Job Title": "",
+          "Company": "",
+          "Location": "",
+          "Start Date": "",
+          "End Date": "",
+          "Responsibilities": [
+            ""
+          ]
+        }}
+      ],
+      "Skills": [
+        ""
+      ],
+      "Certifications": [
+        {{
+          "Certification Name": "",
+          "Issuing Organization": "",
+          "Date": ""
+        }}
+      ],
+      "Projects": [
+        {{
+          "Project Title": "",
+          "Description": "",
+          "Technologies Used": ""
+        }}
+      ],
+      "Awards": [
+        {{
+          "Award Name": "",
+          "Issuing Organization": "",
+          "Date": ""
+        }}
+      ]
+    }}
+    """
+
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        max_tokens=1000
+    )
+    
+    return response.choices[0].text.strip()
+
+# Example usage
+resume_content = "Your resume content here"
+parsed_json = parse_resume(resume_content)
+print(parsed_json)
